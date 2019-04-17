@@ -37,9 +37,9 @@
         <script src="data/proect_ecspert_4.js"></script>
         <script src="data/OMS_DSNS_5.js"></script>
         <script src="data/Derch_DSNS_6.js"></script>
-        <script src="data/TerritoryofAmmalgamedCommunityPROJECT_7.js"></script>
+        <script src="data/otg_zhyt_7.js"></script>
         <script src="data/centr_atu_8.js"></script>
-        <script src="data/TerritoryofAmmalgamedCommunity_9.js"></script>
+        <script src="data/TerritoryofAmmalgamedCommunityPROJECT_9.js"></script>
         <script src="data/Rayonboundary_10.js"></script>
         <script src="data/Oblastboundary_11.js"></script>
         <script>
@@ -60,7 +60,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:12, minZoom:6
-        }).fitBounds([[49.6268733943,27.1588779115],[51.757759351,30.1524408819]]);
+        }).fitBounds([[49.7433102134,27.8418305473],[50.8087531918,29.8178770401]]);
         var hash = new L.Hash(map);
         map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
         var bounds_group = new L.featureGroup([]);
@@ -447,7 +447,7 @@
             },
         });
         bounds_group.addLayer(layer_Derch_DSNS_6);
-        function pop_TerritoryofAmmalgamedCommunityPROJECT_7(feature, layer) {
+        function pop_otg_zhyt_7(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -459,27 +459,27 @@
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Назва</th>\
-                        <td>' + (feature.properties['name_atu'] !== null ? Autolinker.link(String(feature.properties['name_atu'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Населення (осіб)</th>\
-                        <td>' + (feature.properties['popul'] !== null ? Autolinker.link(String(feature.properties['popul'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">К-ть ОМС</th>\
-                        <td>' + (feature.properties['num_adm'] !== null ? Autolinker.link(String(feature.properties['num_adm'])) : '') + '</td>\
+                        <td>' + (feature.properties['OTG'] !== null ? Autolinker.link(String(feature.properties['OTG'])) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Площа (км2)</th>\
                         <td>' + (feature.properties['area'] !== null ? Autolinker.link(String(feature.properties['area'])) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">Населення (осіб)</th>\
+                        <td>' + (feature.properties['Pop_2018'] !== null ? Autolinker.link(String(feature.properties['Pop_2018'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">К-ть ОМС</th>\
+                        <td>' + (feature.properties['Count_OMS'] !== null ? Autolinker.link(String(feature.properties['Count_OMS'])) : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_TerritoryofAmmalgamedCommunityPROJECT_7_0() {
+        function style_otg_zhyt_7_0() {
             return {
-                pane: 'pane_TerritoryofAmmalgamedCommunityPROJECT_7',
+                pane: 'pane_otg_zhyt_7',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -488,19 +488,19 @@
                 weight: 1, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(202,247,160,0.403921568627)',
+                fillColor: 'rgba(160,211,247,0.403921568627)',
             }
         }
-        map.createPane('pane_TerritoryofAmmalgamedCommunityPROJECT_7');
-        map.getPane('pane_TerritoryofAmmalgamedCommunityPROJECT_7').style.zIndex = 407;
-        map.getPane('pane_TerritoryofAmmalgamedCommunityPROJECT_7').style['mix-blend-mode'] = 'normal';
-        var layer_TerritoryofAmmalgamedCommunityPROJECT_7 = new L.geoJson(json_TerritoryofAmmalgamedCommunityPROJECT_7, {
+        map.createPane('pane_otg_zhyt_7');
+        map.getPane('pane_otg_zhyt_7').style.zIndex = 407;
+        map.getPane('pane_otg_zhyt_7').style['mix-blend-mode'] = 'normal';
+        var layer_otg_zhyt_7 = new L.geoJson(json_otg_zhyt_7, {
             attribution: '<a href=""></a>',
-            pane: 'pane_TerritoryofAmmalgamedCommunityPROJECT_7',
-            onEachFeature: pop_TerritoryofAmmalgamedCommunityPROJECT_7,
-            style: style_TerritoryofAmmalgamedCommunityPROJECT_7_0,
+            pane: 'pane_otg_zhyt_7',
+            onEachFeature: pop_otg_zhyt_7,
+            style: style_otg_zhyt_7_0,
         });
-        bounds_group.addLayer(layer_TerritoryofAmmalgamedCommunityPROJECT_7);
+        bounds_group.addLayer(layer_otg_zhyt_7);
         function pop_centr_atu_8(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -548,7 +548,7 @@
             },
         });
         bounds_group.addLayer(layer_centr_atu_8);
-        function pop_TerritoryofAmmalgamedCommunity_9(feature, layer) {
+        function pop_TerritoryofAmmalgamedCommunityPROJECT_9(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -558,19 +558,19 @@
                 mouseover: highlightFeature,
             });
             var popupContent = '<table>\
-                    <tr>\
+			             <tr>\
                         <th scope="row">Назва</th>\
-                        <td>' + (feature.properties['OTG'] !== null ? Autolinker.link(String(feature.properties['OTG'])) : '') + '</td>\
+                        <td>' + (feature.properties['name_atu'] !== null ? Autolinker.link(String(feature.properties['name_atu'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Населення (осіб)</th>\
-                        <td>' + (feature.properties['Pop_2018'] !== null ? Autolinker.link(String(feature.properties['Pop_2018'])) : '') + '</td>\
+                        <th scope="row">Населення</th>\
+                        <td>' + (feature.properties['popul'] !== null ? Autolinker.link(String(feature.properties['popul'])) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">К-ть ОМС</th>\
-                        <td>' + (feature.properties['Count_OMS'] !== null ? Autolinker.link(String(feature.properties['Count_OMS'])) : '') + '</td>\
+                        <td>' + (feature.properties['num_adm'] !== null ? Autolinker.link(String(feature.properties['num_adm'])) : '') + '</td>\
                     </tr>\
-					   <tr>\
+                    <tr>\
                         <th scope="row">Площа (км2)</th>\
                         <td>' + (feature.properties['area'] !== null ? Autolinker.link(String(feature.properties['area'])) : '') + '</td>\
                     </tr>\
@@ -578,31 +578,28 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_TerritoryofAmmalgamedCommunity_9_0() {
+        function style_TerritoryofAmmalgamedCommunityPROJECT_9_0() {
             return {
-                pane: 'pane_TerritoryofAmmalgamedCommunity_9',
+                pane: 'pane_TerritoryofAmmalgamedCommunityPROJECT_9',
                 opacity: 1,
-                color: 'rgba(37,98,188,1.0)',
+                color: 'rgba(1,103,255,1.0)',
                 dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(157,185,228,0.529411764706)',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
             }
         }
-        map.createPane('pane_TerritoryofAmmalgamedCommunity_9');
-        map.getPane('pane_TerritoryofAmmalgamedCommunity_9').style.zIndex = 409;
-        map.getPane('pane_TerritoryofAmmalgamedCommunity_9').style['mix-blend-mode'] = 'normal';
-        var layer_TerritoryofAmmalgamedCommunity_9 = new L.geoJson(json_TerritoryofAmmalgamedCommunity_9, {
+        map.createPane('pane_TerritoryofAmmalgamedCommunityPROJECT_9');
+        map.getPane('pane_TerritoryofAmmalgamedCommunityPROJECT_9').style.zIndex = 409;
+        map.getPane('pane_TerritoryofAmmalgamedCommunityPROJECT_9').style['mix-blend-mode'] = 'normal';
+        var layer_TerritoryofAmmalgamedCommunityPROJECT_9 = new L.geoJson(json_TerritoryofAmmalgamedCommunityPROJECT_9, {
             attribution: '<a href=""></a>',
-            pane: 'pane_TerritoryofAmmalgamedCommunity_9',
-            onEachFeature: pop_TerritoryofAmmalgamedCommunity_9,
-            style: style_TerritoryofAmmalgamedCommunity_9_0,
+            pane: 'pane_TerritoryofAmmalgamedCommunityPROJECT_9',
+            onEachFeature: pop_TerritoryofAmmalgamedCommunityPROJECT_9,
+            style: style_TerritoryofAmmalgamedCommunityPROJECT_9_0,
         });
-        bounds_group.addLayer(layer_TerritoryofAmmalgamedCommunity_9);
-        map.addLayer(layer_TerritoryofAmmalgamedCommunity_9);
+        bounds_group.addLayer(layer_TerritoryofAmmalgamedCommunityPROJECT_9);
         function pop_Rayonboundary_10(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -628,7 +625,7 @@
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
-                weight: 1.0,
+                weight: 2.0,
                 fillOpacity: 0,
             }
         }
@@ -668,7 +665,7 @@
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
-                weight: 2.0,
+                weight: 3.0,
                 fillOpacity: 0,
             }
         }
@@ -684,7 +681,7 @@
         bounds_group.addLayer(layer_Oblastboundary_11);
         map.addLayer(layer_Oblastboundary_11);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/Oblastboundary_11.png" /> Межі області': layer_Oblastboundary_11,'<img src="legend/Rayonboundary_10.png" /> Межі районів': layer_Rayonboundary_10,'<img src="legend/TerritoryofAmmalgamedCommunity_9.png" /> Обєднані територіальні громади': layer_TerritoryofAmmalgamedCommunity_9,'<img src="legend/centr_atu_8.png" /> Центри проектних ОТГ': layer_centr_atu_8,'<img src="legend/TerritoryofAmmalgamedCommunityPROJECT_7.png" /> Проектні ОТГ': layer_TerritoryofAmmalgamedCommunityPROJECT_7,'<img src="legend/Derch_DSNS_6.png" /> ДПРЧ': layer_Derch_DSNS_6,'<img src="legend/OMS_DSNS_5.png" /> МПК': layer_OMS_DSNS_5,'<img src="legend/proect_ecspert_4.png" /> Проектні МПК': layer_proect_ecspert_4,'<img src="legend/proect_DSNS_3.png" /> Проектні МПК (ДСНС)': layer_proect_DSNS_3,'Зона доступності 20 хв. (89,6%)<br /><table><tr><td style="text-align: center;"><img src="legend/SA_60_2_0.png" /></td><td>ДПРЧ</td></tr><tr><td style="text-align: center;"><img src="legend/SA_60_2_1.png" /></td><td>Існуючі МПК</td></tr></table>': layer_SA_60_2,'Зона доступності 20 хв. (99%)<br /><table><tr><td style="text-align: center;"><img src="legend/SA_114_1_0.png" /></td><td>ДПРЧ</td></tr><tr><td style="text-align: center;"><img src="legend/SA_114_1_1.png" /></td><td>Існуючі МПК</td></tr><tr><td style="text-align: center;"><img src="legend/SA_114_1_2.png" /></td><td>Проектні МПК</td></tr></table>': layer_SA_114_1,'Зона доступності 20 хв. (99,2%)<br /><table><tr><td style="text-align: center;"><img src="legend/SA_191_0_0.png" /></td><td>ДПРЧ</td></tr><tr><td style="text-align: center;"><img src="legend/SA_191_0_1.png" /></td><td>Існуючі МПК</td></tr><tr><td style="text-align: center;"><img src="legend/SA_191_0_2.png" /></td><td>Проектні МПК (ДСНС)</td></tr></table>': layer_SA_191_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/Oblastboundary_11.png" /> Межі області': layer_Oblastboundary_11,'<img src="legend/Rayonboundary_10.png" /> Межі районів': layer_Rayonboundary_10,'<img src="legend/TerritoryofAmmalgamedCommunityPROJECT_9.png" /> Межі проектних ОТГ': layer_TerritoryofAmmalgamedCommunityPROJECT_9,'<img src="legend/centr_atu_8.png" /> Центри проектних ОТГ': layer_centr_atu_8,'<img src="legend/otg_zhyt_7.png" /> Існуючі ОТГ': layer_otg_zhyt_7,'<img src="legend/Derch_DSNS_6.png" /> ДПРЧ (41)': layer_Derch_DSNS_6,'<img src="legend/OMS_DSNS_5.png" /> МПК (19)': layer_OMS_DSNS_5,'<img src="legend/proect_ecspert_4.png" /> Проектні МПК (55)': layer_proect_ecspert_4,'<img src="legend/proect_DSNS_3.png" /> Проектні МПК (ДСНС) (132)': layer_proect_DSNS_3,'Зона доступності 20 хв. (89,6%)<br /><table><tr><td style="text-align: center;"><img src="legend/SA_60_2_0.png" /></td><td>ДПРЧ</td></tr><tr><td style="text-align: center;"><img src="legend/SA_60_2_1.png" /></td><td>Існуючі МПК</td></tr></table>': layer_SA_60_2,'Зона доступності 20 хв. (99%)<br /><table><tr><td style="text-align: center;"><img src="legend/SA_114_1_0.png" /></td><td>ДПРЧ</td></tr><tr><td style="text-align: center;"><img src="legend/SA_114_1_1.png" /></td><td>Існуючі МПК</td></tr><tr><td style="text-align: center;"><img src="legend/SA_114_1_2.png" /></td><td>Проектні МПК</td></tr></table>': layer_SA_114_1,'Зона доступності 20 хв. (99,2%)<br /><table><tr><td style="text-align: center;"><img src="legend/SA_191_0_0.png" /></td><td>ДПРЧ</td></tr><tr><td style="text-align: center;"><img src="legend/SA_191_0_1.png" /></td><td>Існуючі МПК</td></tr><tr><td style="text-align: center;"><img src="legend/SA_191_0_2.png" /></td><td>Проектні МПК (ДСНС)</td></tr></table>': layer_SA_191_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
